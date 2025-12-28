@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@use '../public/assets/styles/all-styles.scss' as all;
+
+
+body {
+    background: #141D2F;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
