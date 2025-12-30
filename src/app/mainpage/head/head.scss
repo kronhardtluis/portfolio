@@ -1,7 +1,7 @@
-// @import '../../../styles.scss';
+@use "../../../../public/assets/styles/all-styles.scss" as all;
 
 #title {
-  // @include dFlex();
+  display: flex;
 
   h2 {
     font-weight: normal;
@@ -16,20 +16,20 @@
 
     h3 {
       font-size: 32px;
-      color: rgba(151, 71, 255, 1);
+      color: all.$myPurple;
       font-weight: normal;
     }
   }
 }
 
 button {
-  background-color: rgb(112, 230, 28);
+  background-color: all.$myGreen;
   padding-block: 10px;
   padding-inline: 20px;
   border-radius: 8px;
   &:hover {
     cursor: pointer;
-    background-color: rgba(151, 71, 255, 1);
+    background-color: all.$myPurple;
   }
 }
 
@@ -47,7 +47,7 @@ button {
 
     div {
       height: 2px;
-      background-color: rgb(112, 230, 28);
+      background-color: all.$myGreen;
       width: 100px;
     }
 

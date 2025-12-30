@@ -1,3 +1,5 @@
+@use '../../../public/assets/styles/all-styles.scss' as all;
+
 img {
   width: auto;
   height: 100%;
@@ -15,23 +17,23 @@ nav {
     font-size: 24px;
 
     a:hover {
-      color: rgb(112, 230, 28);
+      color: all.$myGreen;
     }
 
     button {
-      border: 2px solid rgb(112, 230, 28);
+      border: 2px solid all.$myGreen;
       border-radius: 20%;
       padding: 5px;
       &:hover {
         cursor: pointer;
-        border-color: rgba(151, 71, 255, 1);
+        border-color: all.$myPurple;
       }
     }
 
     .chosen {
-      background-color: rgb(112, 230, 28);
+      background-color: all.$myGreen;
       &:hover {
-        background-color: rgba(151, 71, 255, 1);
+        background-color: all.$myPurple;
       }
     }
   }
