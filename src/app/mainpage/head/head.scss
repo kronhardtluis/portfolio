@@ -1,10 +1,9 @@
-@import '../../../styles.scss';
+// @import '../../../styles.scss';
 
 #title {
-  @include dFlex();
+  // @include dFlex();
 
   h2 {
-    font-size: 50px;
     font-weight: normal;
     rotate: 270deg;
   }
