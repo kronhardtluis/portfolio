@@ -2,20 +2,23 @@
 
 #title {
   display: flex;
+  align-items: center;
 
   h2 {
+    font-size: 88px;
     font-weight: normal;
     rotate: 270deg;
+    margin-top: 16px;
   }
 
   div {
     h1 {
-      font-size: 64px;
+      font-size: 112px;
       font-weight: bold;
     }
 
     h3 {
-      font-size: 32px;
+      font-size: 56px;
       color: all.$myPurple;
       font-weight: normal;
     }
@@ -23,10 +26,12 @@
 }
 
 button {
+  font-size: 24px;
   background-color: all.$myGreen;
-  padding-block: 10px;
-  padding-inline: 20px;
-  border-radius: 8px;
+  padding-block: 16px;
+  padding-inline: 24px;
+  border-radius: 12px;
+  margin-bottom: 56px;
   &:hover {
     cursor: pointer;
     background-color: all.$myPurple;
