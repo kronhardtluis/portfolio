@@ -1,6 +1,29 @@
+@use './variables.scss' as all;
+
 @mixin dFlex($dis: flex, $justifyC: center, $alignI: center, $flexD: column) {
-    display: $dis;
-    justify-content: $justifyC;
-    align-items: $alignI;
-    flex-direction: $flexD;
+  display: $dis;
+  justify-content: $justifyC;
+  align-items: $alignI;
+  flex-direction: $flexD;
+}
+
+@mixin contactButton() {
+  button {
+    font-size: 24px;
+    background-color: all.$myGreen;
+    padding-block: 16px;
+    padding-inline: 24px;
+    border-radius: 12px;
+    margin-bottom: 56px;
+    &:hover {
+      cursor: pointer;
+      background-color: all.$myPurple;
+    }
+  }
+}
+
+@mixin myH2 {
+  h2 {
+    font-size: 54px;
+  }
 }

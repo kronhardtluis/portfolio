@@ -1,4 +1,4 @@
-@use "../../../../public/assets/styles/all-styles.scss" as all;
+@use '../../../../public/assets/styles/all-styles.scss' as all;
 
 #title {
   display: flex;
@@ -25,18 +25,7 @@
   }
 }
 
-button {
-  font-size: 24px;
-  background-color: all.$myGreen;
-  padding-block: 16px;
-  padding-inline: 24px;
-  border-radius: 12px;
-  margin-bottom: 56px;
-  &:hover {
-    cursor: pointer;
-    background-color: all.$myPurple;
-  }
-}
+@include all.contactButton();
 
 #socials {
   width: 100%;
@@ -72,8 +61,8 @@ button {
     gap: 10px;
     top: -50px;
     right: -80px;
-    
-    img{
+
+    img {
       height: 16px;
     }
   }

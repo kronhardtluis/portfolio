@@ -1,7 +1,34 @@
+@use "../../../../public/assets/styles/all-styles.scss" as all;
+
 article {
   width: 40dvw;
 
-  h2 {
-    font-size: 88px;
+  @include all.myH2;
+
+  .info {
+    display: flex;
+    align-items: start;
+
+    img{
+      width: 20px;
+      height: 24px;
+      margin: 16px;
+      margin-top: 20px;
+      min-height: 24px;
+      min-width: 20px;
+    }
+
+    #puzzle {
+      height: 20px;
+      min-height: 20px;
+    }
+
+    p{
+      margin-top: 16px;
+    }
   }
+}
+
+#about-me-picture {
+  margin-top: 50%;
 }

@@ -1,0 +1,42 @@
+@use '../../../../public/assets/styles/all-styles.scss' as all;
+
+#technologies {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 50%;
+
+  div {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    width: 80px;
+    text-align: center;
+    font-weight: 600;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+article {
+  width: 40%;
+
+  h2 {
+    margin-block: 48px;
+  }
+
+  h4 {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    span {
+      color: all.$myPurple;
+    }
+  }
+
+  @include all.contactButton();
+  @include all.myH2;
+}
