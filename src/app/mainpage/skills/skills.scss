@@ -2,39 +2,60 @@
 
 #technologies {
   display: grid;
-  grid-template-columns: auto auto auto;
-  width: 50%;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  width: 45%;
 
   div {
     display: flex;
-    margin: 10px;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
     gap: 8px;
     width: 80px;
     text-align: center;
     font-weight: 600;
 
     img {
-      height: 40px;
-      width: 40px;
+      height: 48px;
+      width: 48px;
     }
   }
 }
 
 article {
-  width: 40%;
+  width: 45%;
 
-  h2 {
-    margin-block: 48px;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+      margin-block: 48px;
+    }
+
+    #blue-line {
+      height: 5px;
+      width: 30dvw;
+      border-radius: 2px;
+      background-color: all.$myBlue;
+      right: -5dvw;
+    }
   }
 
   h4 {
+    font-size: 32px;
     margin-top: 40px;
     margin-bottom: 24px;
     span {
       color: all.$myPurple;
     }
+  }
+
+  button {
+    margin-top: 44px;
   }
 
   @include all.contactButton();
