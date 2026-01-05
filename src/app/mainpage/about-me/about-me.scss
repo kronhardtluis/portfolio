@@ -2,7 +2,8 @@
 
 article {
   width: 40dvw;
-  @include all.myH2;
+  margin-bottom: 40%;
+  @include all.myH2();
 
   .info {
     display: flex;
@@ -29,5 +30,5 @@ article {
 }
 
 #about-me-picture {
-  margin-top: 50%;
+  margin-top: 40%;
 }

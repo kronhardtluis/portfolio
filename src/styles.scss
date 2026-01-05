@@ -1,8 +1,16 @@
 @use '../public/assets/styles/all-styles.scss' as all;
 
-body {
-    background: all.$myBackground;
+app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: all.$myBackground;
     overflow-x: hidden;
+    max-width: 2560px;
 }

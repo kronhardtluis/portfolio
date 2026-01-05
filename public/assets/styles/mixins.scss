@@ -1,11 +1,11 @@
 @use './variables.scss' as all;
 
-@mixin dFlex($dis: flex, $justifyC: center, $alignI: center, $flexD: column) {
-  display: $dis;
-  justify-content: $justifyC;
-  align-items: $alignI;
-  flex-direction: $flexD;
-}
+// @mixin dFlex($dis: flex, $justifyC: center, $alignI: center, $flexD: column) {
+//   display: $dis;
+//   justify-content: $justifyC;
+//   align-items: $alignI;
+//   flex-direction: $flexD;
+// }
 
 @mixin contactButton() {
   button {
@@ -22,8 +22,15 @@
   }
 }
 
-@mixin myH2 {
+@mixin myH2() {
   h2 {
     font-size: 64px;
   }
+}
+
+@mixin sideLine($myColor: white) {
+  height: 5px;
+  width: 50dvw;
+  border-radius: 2px;
+  background-color: $myColor;
 }

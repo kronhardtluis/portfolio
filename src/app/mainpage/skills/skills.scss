@@ -26,6 +26,7 @@
 
 article {
   width: 45%;
+  overflow: visible;
 
   div {
     display: flex;
@@ -37,10 +38,7 @@ article {
     }
 
     #blue-line {
-      height: 5px;
-      width: 30dvw;
-      border-radius: 2px;
-      background-color: all.$myBlue;
+      @include all.sideLine(all.$myBlue);
       right: -5dvw;
     }
   }
@@ -49,6 +47,7 @@ article {
     font-size: 32px;
     margin-top: 40px;
     margin-bottom: 24px;
+
     span {
       color: all.$myPurple;
     }
@@ -59,5 +58,5 @@ article {
   }
 
   @include all.contactButton();
-  @include all.myH2;
+  @include all.myH2();
 }
