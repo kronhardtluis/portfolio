@@ -10,10 +10,12 @@ app-header {
     justify-content: space-between;
     background: all.$myBackground;
     z-index: 999;
+    max-width: 1440px;
 }
 
 app-mainpage {
     display: flex;
     flex-direction: column;
     gap: 10dvh;
+    max-width: 1440px;
 }

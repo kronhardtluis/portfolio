@@ -7,10 +7,9 @@ app-root {
     align-items: center;
     color: white;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 body {
     background: all.$myBackground;
-    overflow-x: hidden;
-    max-width: 2560px;
 }

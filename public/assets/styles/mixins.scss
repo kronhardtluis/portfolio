@@ -1,12 +1,5 @@
 @use './variables.scss' as all;
 
-// @mixin dFlex($dis: flex, $justifyC: center, $alignI: center, $flexD: column) {
-//   display: $dis;
-//   justify-content: $justifyC;
-//   align-items: $alignI;
-//   flex-direction: $flexD;
-// }
-
 @mixin contactButton() {
   button {
     font-size: 24px;
@@ -25,6 +18,13 @@
 @mixin myH2() {
   h2 {
     font-size: 64px;
+    margin-block: 48px;
+  }
+}
+
+@mixin myH4() {
+  h4 {
+    font-size: 32px;
   }
 }
 

@@ -15,11 +15,11 @@ app-about-me {
   box-shadow: 0px 30px 30px rgba(255, 255, 255, 0.05);
   border-radius: 0 0 70% 30%;
   right: 40%;
-  left: -35%;
+  left: -40%;
   padding-right: 80%;
   padding-left: 45%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: end;
   overflow: hidden;
 }
@@ -28,6 +28,19 @@ app-skills {
   margin-top: 10dvh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-inline: 5%;
   width: 100%;
+  min-height: 80dvh;
+}
+
+app-projects {
+  margin-top: 10dvh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding-inline: 5%;
+  width: 100%;
+  min-height: 80dvh;
 }
