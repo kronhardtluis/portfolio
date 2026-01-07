@@ -40,7 +40,7 @@
     gap: 16px;
 
     div {
-      @include  all.sideLine($myColor: all.$myGreen);
+      @include all.sideLine(all.$myGreen);
     }
 
     img {
