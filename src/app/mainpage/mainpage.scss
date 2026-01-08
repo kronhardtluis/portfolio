@@ -31,7 +31,6 @@ app-skills {
   align-items: center;
   padding-inline: 5%;
   width: 100%;
-  min-height: 80dvh;
 }
 
 app-projects {
@@ -42,5 +41,15 @@ app-projects {
   flex-direction: column;
   padding-inline: 5%;
   width: 100%;
-  min-height: 80dvh;
+}
+
+app-comments {
+  margin-top: 10dvh;
+  padding-left: 5%;
+  gap: 10%;
+  max-width: 100%;
+}
+
+app-contact {
+  margin-top: 10dvh;
 }

@@ -36,14 +36,12 @@
   background-color: $myColor;
 }
 
-@mixin proj-bg($url1: 'assets/img/PolloLoco.png', $url2: 'assets/img/startscreen_1.png') {
-  background-image: url($url1);
+@mixin proj-bg() {
   background-position: center;
   background-size: cover;
   background-size: clamp(300px, 40dvw, 640px);
 
   &:hover {
-    background-image: url($url2);
     background-size: clamp(300px, 40dvw, 640px);
     background-position: top;
     background-repeat: no-repeat;

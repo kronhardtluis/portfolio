@@ -1,0 +1,99 @@
+@use '../../../../public/assets/styles/all-styles.scss' as all;
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  #green-line {
+    position: absolute;
+    right: -20dvw;
+    @include all.sideLine(all.$myGreen);
+  }
+
+  @include all.myH2();
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+
+  #inducement {
+    width: 40%;
+
+    #blue-line {
+      @include all.sideLine(all.$myBlue);
+      position: absolute;
+      left: -170%;
+      top: 3%;
+    }
+
+    h4 {
+      margin-bottom: 24px;
+    }
+
+    @include all.myH4();
+  }
+
+  #mailing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+
+    .text-input {
+      border: 1px solid all.$myPurple;
+      border-radius: 12px;
+      background-color: all.$myBackground;
+      margin: 8px;
+      padding-block: 8px;
+      padding-inline: 16px;
+      width: 100%;
+
+      &:hover {
+        border-color: all.$myBlue;
+      }
+    }
+
+    #message {
+      height: 300px;
+      border-radius: 12px 12px 0 12px;
+      overflow: hidden;
+    }
+
+    #checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-block: 8px;
+
+      input {
+        width: 16px;
+        height: 16px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+      }
+
+      p {
+        font-size: 16px;
+
+        a {
+            color: all.$myPurple;
+        }
+      }
+    }
+
+    #send-button {
+      font-size: 24px;
+      padding-block: 16px;
+      padding-inline: 24px;
+      border-radius: 12px;
+      background-color: rgb(182, 182, 182);
+      width: 40%;
+    }
+  }
+}

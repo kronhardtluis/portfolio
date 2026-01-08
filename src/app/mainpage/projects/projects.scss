@@ -1,6 +1,6 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
-.title {
+#title {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -24,11 +24,13 @@
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(2, clamp(300px, 40dvw, 640px));
-  grid-template-rows: repeat(2, clamp(300px, 40dvw, 640px));
+  grid-template-rows: repeat(1, clamp(300px, 40dvw, 640px));
 
   .frame {
     border-radius: 16px;
     border: 2px solid all.$myGreen;
+  width: clamp(300px, 40dvw, 640px);
+  height: clamp(300px, 40dvw, 640px);
 
     .project-buttons {
       display: flex;
@@ -91,7 +93,21 @@
   }
 
   #pollo-loco {
+    background-image: url('/assets/img/PolloLoco.png');
     @include all.proj-bg();
+
+    &:hover {
+      background-image: url('/assets/img/startscreen_1.png');
+    }
+  }
+
+  #join {
+    background-image: url('/assets/img/join-laptop.png');
+    @include all.proj-bg();
+
+    &:hover {
+      background-image: url('/assets/img/join.png');
+    }
   }
 
   @include all.myH4();
