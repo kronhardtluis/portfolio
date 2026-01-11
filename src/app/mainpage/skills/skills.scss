@@ -14,13 +14,14 @@
     margin: 10px;
     margin-left: 0;
     gap: 8px;
-    width: 80px;
     text-align: center;
     font-weight: 600;
+    width: 6rem;
+    height: 7rem;
 
     img {
-      height: 48px;
-      width: 48px;
+      height: 2.7rem;
+      width: 2.7rem;
     }
   }
 }
@@ -29,19 +30,15 @@ article {
   width: 45%;
   overflow: visible;
 
-  #title {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  h2 {
+    margin-block: 48px;
+  }
 
-    h2 {
-      margin-block: 48px;
-    }
-
-    #blue-line {
-      @include all.sideLine(all.$myBlue);
-      right: -5dvw;
-    }
+  #blue-line {
+    @include all.sideLine(all.$myBlue);
+    position: absolute;
+    top: 17%;
+    left: 11rem;
   }
 
   h4 {
@@ -55,9 +52,9 @@ article {
 
   button {
     margin-top: 44px;
+    @include all.myButton();
   }
 
-  @include all.contactButton();
   @include all.myH2();
   @include all.myH4();
 }

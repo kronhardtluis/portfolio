@@ -8,13 +8,11 @@ img {
 nav {
   display: flex;
   align-items: center;
-  font-size: 30px;
-  gap: 30px;
+  gap: 2rem;
 
   div {
     display: flex;
-    gap: 24px;
-    font-size: 24px;
+    gap: 1rem;
 
     a:hover {
       color: all.$myGreen;

@@ -1,0 +1,34 @@
+html {
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+nav {
+  font-size: 1.4rem;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-VariableFont_wdth,wght.ttf');
+}

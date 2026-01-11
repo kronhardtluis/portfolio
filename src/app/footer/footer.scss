@@ -1,0 +1,15 @@
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #socials {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+#legal-notice {
+    margin-left: 56px;
+}

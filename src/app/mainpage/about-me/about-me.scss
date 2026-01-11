@@ -2,7 +2,7 @@
 
 article {
   width: 40dvw;
-  margin-bottom: 40%;
+  margin-bottom: 10%;
   @include all.myH2();
 
   .info {
@@ -10,17 +10,19 @@ article {
     align-items: start;
 
     img{
-      width: 20px;
+      width: 1.5rem;
       height: 24px;
       margin: 16px;
       margin-top: 20px;
-      min-height: 24px;
-      min-width: 20px;
+      min-height: 1.8rem;
+      min-width: 1.5rem;
     }
 
     #puzzle {
-      height: 20px;
-      min-height: 20px;
+      height: 1.8rem;
+      width: 1.8rem;
+      min-height: 1.8rem;
+      min-width: 1.8rem;
     }
 
     p{
@@ -29,6 +31,7 @@ article {
   }
 }
 
-#about-me-picture {
-  margin-top: 40%;
+#myself {
+  height: auto;
+  width: 40%;
 }

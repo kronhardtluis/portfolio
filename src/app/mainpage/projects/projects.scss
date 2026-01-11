@@ -1,17 +1,13 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
-#title {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  left: -52dvw;
-
-  #purple-line {
-    @include all.sideLine(all.$myPurple);
-  }
-
-  @include all.myH2();
+#purple-line {
+  @include all.sideLine(all.$myPurple);
+  position: absolute;
+  top: 10%;
+  right: 97%;
 }
+
+@include all.myH2();
 
 #project-intro {
   width: clamp(290px, 40%, 600px);
@@ -24,13 +20,13 @@
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(2, clamp(300px, 40dvw, 640px));
-  grid-template-rows: repeat(1, clamp(300px, 40dvw, 640px));
+  grid-template-rows: repeat(auto, clamp(300px, 40dvw, 640px));
 
   .frame {
     border-radius: 16px;
     border: 2px solid all.$myGreen;
-  width: clamp(300px, 40dvw, 640px);
-  height: clamp(300px, 40dvw, 640px);
+    width: clamp(300px, 40dvw, 640px);
+    height: clamp(300px, 40dvw, 640px);
 
     .project-buttons {
       display: flex;
@@ -38,31 +34,13 @@
       align-items: center;
       height: 40%;
 
-      button {
-        font-size: 20px;
-        padding-block: 10px;
-        padding-inline: 24px;
-        border-radius: 12px;
+      .github-button {
+        border: 2px solid all.$myBlue;
+        @include all.myButton($bg-color: none, $h-color: all.$myBlue);
+      }
 
-        &:hover {
-          cursor: pointer;
-        }
-
-        &.github-button {
-          border: 2px solid all.$myBlue;
-
-          &:hover {
-            background-color: all.$myBlue;
-          }
-        }
-
-        &.test-button {
-          background-color: all.$myPurple;
-
-          &:hover {
-            background-color: all.$myGreen;
-          }
-        }
+      .test-button {
+        @include all.myButton($bg-color: all.$myPurple, $h-color: all.$myGreen);
       }
     }
 
@@ -91,6 +69,7 @@
       }
     }
   }
+   // ./assets/... und assets/... funktionieren nicht
 
   #pollo-loco {
     background-image: url('/assets/img/PolloLoco.png');

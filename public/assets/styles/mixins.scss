@@ -1,32 +1,26 @@
 @use './variables.scss' as all;
 
-@mixin contactButton() {
-  button {
-    font-size: 24px;
-    background-color: all.$myGreen;
-    padding-block: 16px;
-    padding-inline: 24px;
-    border-radius: 12px;
-    margin-bottom: 56px;
+@mixin myButton($bg-color: all.$myGreen, $h-color: all.$myPurple) {
+    font-size: 1.25rem;
+    background-color: $bg-color;
+    padding-block: 0.6rem;
+    padding-inline: 1.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.75rem;
 
     &:hover {
       cursor: pointer;
-      background-color: all.$myPurple;
+      background-color: $h-color;
     }
-  }
 }
 
 @mixin myH2() {
   h2 {
-    font-size: 64px;
-    margin-block: 48px;
+    margin-block: 1.5rem;
   }
 }
 
 @mixin myH4() {
-  h4 {
-    font-size: 32px;
-  }
 }
 
 @mixin sideLine($myColor: white) {
