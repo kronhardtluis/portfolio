@@ -8,7 +8,7 @@
 
   #green-line {
     position: absolute;
-    right: -20dvw;
+    left: calc(50% + 8rem);
     @include all.sideLine(all.$myGreen);
   }
 
@@ -23,10 +23,10 @@
     width: 40%;
 
     #blue-line {
-      @include all.sideLine(all.$myBlue);
       position: absolute;
-      left: -170%;
+      right: 103%;
       top: 3%;
+      @include all.sideLine(all.$myBlue);
     }
 
     h4 {

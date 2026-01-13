@@ -25,14 +25,12 @@ nav {
       &:hover {
         cursor: pointer;
         border-color: all.$myPurple;
+        background-color: all.$myPurple;
       }
     }
 
     .chosen {
       background-color: all.$myGreen;
-      &:hover {
-        background-color: all.$myPurple;
-      }
     }
   }
 }
