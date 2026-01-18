@@ -20,7 +20,7 @@
     height: 7rem;
 
     img {
-      height: 2.7rem;
+      // height: 2.7rem;
       width: 2.7rem;
     }
   }
@@ -28,7 +28,7 @@
 
 article {
   width: 45%;
-  overflow: visible;
+  height: auto;
 
   h2 {
     margin-block: 48px;
@@ -37,22 +37,22 @@ article {
   #blue-line {
     @include all.sideLine(all.$myBlue);
     position: absolute;
-    top: 17%;
+    top: 3.7rem;
     left: 11rem;
   }
 
   h4 {
     margin-top: 40px;
-    margin-bottom: 24px;
+    margin-bottom: 1rem;
 
     span {
       color: all.$myPurple;
     }
   }
 
-  button {
-    margin-top: 44px;
+  a {
     @include all.myButton();
+    margin-top: 10%;
   }
 
   @include all.myH2();

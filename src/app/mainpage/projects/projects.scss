@@ -3,7 +3,7 @@
 #purple-line {
   @include all.sideLine(all.$myPurple);
   position: absolute;
-  top: 3.8rem;
+  top: calc(15dvh + 3.8rem);
   right: 97%;
 }
 
@@ -34,12 +34,12 @@
       align-items: center;
       height: 40%;
 
-      .github-button {
+      .github-link {
         border: 2px solid all.$myBlue;
         @include all.myButton($bg-color: none, $h-color: all.$myBlue);
       }
 
-      .test-button {
+      .test-link {
         @include all.myButton($bg-color: all.$myPurple, $h-color: all.$myGreen);
       }
     }
