@@ -1,8 +1,24 @@
-@keyframes changeColor {
-    0% {                        // prozentualer Zeitpunkt
+@use 'variables.scss' as all;
 
+@keyframes zoom-effect {
+    0% {
+      background-size: 100%;
     }
-    100% {                      // prozentualer Zeitpunkt
+    100% {
+      background-size: 150%;
+}
+}
 
-    }
+@keyframes jump {
+  0% {
+    bottom: 10%;
+  }
+
+  70% {
+    bottom:12%
+  }
+
+  100% {
+    bottom: 10%;
+  }
 }

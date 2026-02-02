@@ -1,5 +1,20 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
+
+.background {
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+    &#purple{
+    left: 0;
+  }
+
+  &#blue{
+    right: 0;
+  }
+}
+
 #title {
   display: flex;
   align-items: center;

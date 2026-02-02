@@ -1,15 +1,23 @@
 <div id="commentary">
-  <div id="comment-frame">
-    <i>"</i>
-    <p id="citation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sequi fugit nostrum laudantium ab eaque debitis id nisi dolore nulla!</p>
-    <div id="colleague"><div id="blue-line"></div><p>Mona Lisa - famous Model</p></div>
-  </div>
-  <div id="colleague-picture"><img id="portrait" src="assets/img/lisa.jpg" alt=""><div id="picture-line"></div></div>
+  <!-- @for (item of allComments; track $index) { -->
+    <div id="comment-frame">
+      <i>"</i>
+      <p id="citation"></p>
+      <div id="colleague">
+        <div id="blue-line"></div>
+        <p>Mona Lisa - famous Model</p>
+      </div>
+    </div>
+    <div id="colleague-picture">
+      <img id="portrait" src="assets/img/lisa.jpg" alt="" />
+      <div id="picture-line"></div>
+    </div>
+  <!-- } -->
 </div>
 <div id="arrows">
   <button><img class="left arrow" src="assets/icons/arrow-green.png" alt="arrow-left" /></button>
-  <div class="dot" id="dot1"></div>
-  <div class="dot" id="dot2"></div>
-  <div class="dot" id="dot3"></div>
+  <button class="dot" id="dot1"></button>
+  <button class="dot" id="dot2"></button>
+  <button class="dot" id="dot3"></button>
   <button><img class="arrow" src="assets/icons/arrow-green.png" alt="arrow-right" /></button>
 </div>

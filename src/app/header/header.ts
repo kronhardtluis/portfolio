@@ -1,3 +1,4 @@
+import { TRANSLATION, translationFace } from './../../../public/i18n/translation';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss',
 })
 export class Header {
-
+  translation: translationFace = TRANSLATION;                  // nachfragen wie das funktioniert
 }
+
+console.log(TRANSLATION);

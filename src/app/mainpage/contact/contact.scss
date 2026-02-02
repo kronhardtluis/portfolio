@@ -1,5 +1,11 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
+.background{
+  position: absolute;
+  right: 0;
+  top: 0%;
+}
+
 #title {
   display: flex;
   justify-content: center;
@@ -32,8 +38,6 @@
     h4 {
       margin-bottom: 24px;
     }
-
-    @include all.myH4();
   }
 
   #mailing {
@@ -52,8 +56,10 @@
       padding-inline: 16px;
       width: 100%;
 
-      &:hover {
+      &:hover,
+      &:focus {
         border-color: all.$myBlue;
+        outline: all.$myBlue;
       }
     }
 
@@ -86,5 +92,18 @@
     button {
       @include all.myButton($bg-color: rgb(182, 182, 182), $h-color: rgb(182, 182, 182));
     }
+  }
+}
+
+
+.scroll {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  bottom: 10%;
+  right: 5%;
+  &:hover {
+    cursor: pointer;
+    animation: jump 1s infinite;
   }
 }

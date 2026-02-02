@@ -1,6 +1,6 @@
-@use './variables.scss' as all;
+@use './variables.scss' as variables;
 
-@mixin myButton($bg-color: all.$myGreen, $h-color: all.$myPurple) {
+@mixin myButton($bg-color: variables.$myGreen, $h-color: variables.$myPurple) {
     font-size: 1.25rem;
     background-color: $bg-color;
     padding-block: 0.6rem;
@@ -19,24 +19,9 @@
   }
 }
 
-@mixin myH4() {
-}
-
 @mixin sideLine($myColor: white) {
   height: 5px;
   width: 50dvw;
   border-radius: 2px;
   background-color: $myColor;
-}
-
-@mixin proj-bg() {
-  background-position: center;
-  background-size: cover;
-  background-size: clamp(300px, 40dvw, 640px);
-
-  &:hover {
-    background-size: clamp(300px, 40dvw, 640px);
-    background-position: top;
-    background-repeat: no-repeat;
-  }
 }

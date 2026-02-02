@@ -1,9 +1,24 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
+.background {
+  position: absolute;
+  max-height: 100%;
+
+  &#blue{
+    right: 0;
+    top: -10%;
+  }
+
+  &#green{
+    left: 0;
+    bottom: 0
+  }
+}
+
 #purple-line {
   @include all.sideLine(all.$myPurple);
   position: absolute;
-  top: calc(15dvh + 3.8rem);
+  top: calc(7dvh + 3.8rem);
   right: 97%;
 }
 
@@ -27,6 +42,15 @@
     border: 2px solid all.$myGreen;
     width: clamp(300px, 40dvw, 640px);
     height: clamp(300px, 40dvw, 640px);
+    content-visibility: hidden;
+    background-position: center;
+    background-size: cover;
+    background-size: clamp(300px, 40dvw, 640px);
+    background-color: all.$myBackground;
+
+    &:hover {
+      animation: zoom-effect 0.5s forwards;
+    }
 
     .project-buttons {
       display: flex;
@@ -36,6 +60,7 @@
 
       .github-link {
         border: 2px solid all.$myBlue;
+        background-color: rgba(0, 0, 0, 0.5);
         @include all.myButton($bg-color: none, $h-color: all.$myBlue);
       }
 
@@ -68,25 +93,16 @@
       }
     }
   }
-   // ./assets/... und assets/... funktionieren nicht
+}
 
-  #pollo-loco {
-    background-image: url('/assets/img/PolloLoco.png');
-    @include all.proj-bg();
-
-    &:hover {
-      background-image: url('/assets/img/startscreen_1.png');
+@keyframes zoom-effect {
+    0% {                        // prozentualer Zeitpunkt
+      background-size: 100%;
     }
-  }
-
-  #join {
-    background-image: url('/assets/img/join-laptop.png');
-    @include all.proj-bg();
-
-    &:hover {
-      background-image: url('/assets/img/join.png');
+    100% {                      // prozentualer Zeitpunkt
+      background-size: 160%;
+      content-visibility: visible;
+      background-position: bottom;
+      background-repeat: no-repeat;
     }
-  }
-
-  @include all.myH4();
 }

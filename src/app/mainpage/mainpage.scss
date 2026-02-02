@@ -1,15 +1,14 @@
 @use '../../../public/assets/styles/all-styles.scss' as all;
 
 app-head {
+  padding-top: 20dvh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
   min-height: 85dvh;
-  padding-top: 20dvh;
   padding-inline: 5%;
-  overflow: visible;
 }
 
 app-about-me {
@@ -24,7 +23,7 @@ app-about-me {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 app-skills {
@@ -34,30 +33,33 @@ app-skills {
   align-items: center;
   padding-inline: 5%;
   width: 100%;
-  overflow: visible;
 }
 
 app-projects {
-  padding-top: 15dvh;
+  padding-top: 7dvh;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   padding-inline: 5%;
   width: 100%;
-  overflow: visible;
 }
 
 app-comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80dvh;
   padding-top: 10dvh;
   padding-left: 5%;
   gap: 10%;
   max-width: 100%;
-  overflow: visible;
 }
 
 app-contact {
   padding-top: 10dvh;
-  margin-inline: 5%;
-  overflow: visible;
+  padding-bottom: 15dvh;
+  padding-inline: 5%;
+  overflow: hidden;
 }

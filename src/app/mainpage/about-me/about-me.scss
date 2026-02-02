@@ -1,4 +1,11 @@
-@use "../../../../public/assets/styles/all-styles.scss" as all;
+@use '../../../../public/assets/styles/all-styles.scss' as all;
+
+.background {
+  position: absolute;
+  right: 35%;
+  bottom: -20%;
+  height: 100%;
+}
 
 article {
   width: 40dvw;
@@ -9,7 +16,7 @@ article {
     display: flex;
     align-items: start;
 
-    img{
+    img {
       width: 1.5rem;
       height: 24px;
       margin: 16px;
@@ -25,7 +32,7 @@ article {
       min-width: 1.8rem;
     }
 
-    p{
+    p {
       margin-top: 16px;
     }
   }
