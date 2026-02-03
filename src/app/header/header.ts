@@ -1,14 +1,18 @@
-import { TRANSLATION, translationFace } from './../../../public/i18n/translation';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
-  translation: translationFace = TRANSLATION;                  // nachfragen wie das funktioniert
-}
+  private translate = inject(TranslateService);
 
-console.log(TRANSLATION);
+  useLanguage(language: string): void {
+      this.translate.use(language);
+    document.getElementById('de')!.classList.toggle('chosen');
+    document.getElementById('en')!.classList.toggle('chosen');
+  }
+}

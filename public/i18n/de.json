@@ -1,0 +1,55 @@
+{
+  "de": {
+    "header": {
+      "about_me": "Über mich"
+    },
+
+    "head": {
+      "title1": "Ich bin",
+      "button": "Schreib mir!",
+      "arrow": "Scrolle runter"
+    },
+
+    "about_me": {
+      "title": "ÜBER MICH",
+      "name": "Hallo, ich heiße Luis!",
+      "fun": "Ich habe das Coden bei der Developer-Akademie in München gelernt und hatte eine Menge Freude dabei.",
+      "goal": "Mein Ziel ist es Programme und Webseiten für jeden einfacher zu gestalten.",
+      "living": "Ich lebe in Alzey und würde gerne halb im Homeoffice und halb im Büro arbeiten.",
+      "motivation": "Um mein Ziel zu erreichen, muss ich eine Menge Technologien lernen. Das motiviert mich.",
+      "learn": "Je schwieriger die Aufgabe, desto mehr kann ich dabei lernen. Schwierigkeiten steigern mein analytisches Denken, meine Kreativität, Ausdauer und Teamfähigkeit."
+    },
+
+    "skills": {
+      "learning": "Am Lernen",
+      "experience": "Mir hat das Lernen beim kreieren des Projekts gefallen. Ich habe jede Schwierigkeit entgegengenommen, die mir eine neue Technologie brachte und habe versucht das meiste daraus zu lernen.",
+      "looking": "Auf der Suche nach ",
+      "another": "einem anderen Skill",
+      "new_skills": "Ich bin kontinuierlch dabei neue Technologien und Frameworks zu lernen, um so effektiv wie möglich zu sein.",
+      "button": "Kontaktaufnahme"
+    },
+
+    "projects": {
+      "intro": "Entdecke einen Teil meiner Arbeit hier - Interagiere mit Projekten, um meine Skills in Aktion zu sehen.",
+      "test": "Test"
+    },
+
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Gibt es ein Problem zu lösen?",
+      "needed": "Wird ein Frontend Developer gebraucht? ",
+      "me": "Kontaktiere mich!",
+      "name": "Dein Name",
+      "mail": "Deine Email",
+      "message": "Deine Nachricht",
+      "have": "Ich habe die ",
+      "legals": "rechtlichen Hinweise ",
+      "agree": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "send": "Nachricht senden"
+    },
+
+    "footer": {
+      "legal": "Rechtlicher Hinweis"
+    }
+  }
+}

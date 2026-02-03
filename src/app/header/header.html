@@ -1,12 +1,12 @@
 <a href="#head"><img src="assets/img/LuisLogo.png" alt="Luis"></a>
 <nav>
   <div>
-    <a href="#about-me">{{translation.de.header.about_me}}</a>
+    <a href="#about-me">{{'header.about_me' | translate}}</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Portfolio</a>
   </div>
   <div>
-    <button>DE</button>
-    <button class="chosen">EN</button>
+    <button id="de" class="chosen" (click)="useLanguage('de')">DE</button>
+    <button id="en" (click)="useLanguage('en')">EN</button>
   </div>
 </nav>
