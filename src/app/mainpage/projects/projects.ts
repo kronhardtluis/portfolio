@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface projectFace {
   name: string;
@@ -9,7 +10,7 @@ interface projectFace {
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

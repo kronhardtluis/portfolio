@@ -1,55 +1,55 @@
 {
-  "en": {
-    "header": {
-      "about_me": "About me"
-    },
+  "header": {
+    "about_me": "About me"
+  },
 
-    "head": {
-      "title1": "I am",
-      "button": "Let's talk!",
-      "arrow": "Scroll down"
-    },
+  "head": {
+    "title1": "I am",
+    "button": "Let's talk!",
+    "arrow": "Scroll down"
+  },
 
-    "about_me": {
-      "title": "ABOUT ME",
-      "name": "Hey there, I'm Luis!",
-      "fun": "I learned coding at the Developer Akademie in Munich and had a lot of fun there.",
-      "goal": "My goal is to make programs and websites easier to use for everyone.",
-      "living": "I'm living in Alzey and would like to work half remote and half on-site.",
-      "motivation": "To reach my goal, I have to learn a lot of technologies. That motivates me.",
-      "learn": "The more difficult the task, the more I can learn. Challenges improve my analytical thinking, creativity, persistence, and collaboration."
-    },
+  "about_me": {
+    "title": "ABOUT ME",
+    "name": "Hey there, I'm Luis!",
+    "fun": "I learned coding at the Developer Akademie in Munich and had a lot of fun there.",
+    "goal": "My goal is to make programs and websites easier to use for everyone.",
+    "living": "I'm living in Alzey and would like to work half remote and half on-site.",
+    "motivation": "To reach my goal, I have to learn a lot of technologies. That motivates me.",
+    "learn": "The more difficult the task, the more I can learn. Challenges improve my analytical thinking, creativity, persistence, and collaboration."
+  },
 
-    "skills": {
-      "learning": "Continually learning",
-      "experience": "I enjoyed learning while creating my projects. I took on every challenge that a new technology brought and tried to learn as much as possible from it.",
-      "looking": "Looking for ",
-      "another": "another skill",
-      "new_skills": "I'm continually learning new technologies and frameworks to be as effective as possible.",
-      "button": "Get in touch"
-    },
+  "skills": {
+    "learning": "Continually learning",
+    "experience": "I enjoyed learning while creating my projects. I took on every challenge that a new technology brought and tried to learn as much as possible from it.",
+    "looking": "Looking for ",
+    "another": "another skill",
+    "new_skills": "I'm continually learning new technologies and frameworks to be as effective as possible.",
+    "button": "Get in touch"
+  },
 
-    "projects": {
-      "intro": "Explore a selection of my work here – interact with projects to see my skills in action.",
-      "test": "Test"
-    },
+  "projects": {
+    "intro": "Explore a selection of my work here – interact with projects to see my skills in action.",
+    "test": "test"
+  },
 
-    "contact": {
-      "title": "Contact",
-      "subtitle": "Got a problem to solve?",
-      "needed": "Need a frontend developer? ",
-      "me": "Contact me!",
-      "name": "Your name",
-      "mail": "Your email",
-      "message": "Your message",
-      "have": "I've read the ",
-      "legals": "legal notice ",
-      "agree": "and agree to the processing of my data as outlined.",
-      "send": "Send message"
-    },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Got a problem to solve?",
+    "needed": "Need a frontend developer? ",
+    "me": "Contact me!",
+    "name": "Your name",
+    "mail": "Your email",
+    "message": "Your message",
+    "have": "I've read the ",
+    "legals": "legal notice ",
+    "agree": "and agree to the processing of my data as outlined.",
+    "send": "Send message"
+  },
 
-    "footer": {
-      "legal": "Legal notice"
-    }
-  }
+  "footer": {
+    "legal": "Legal notice"
+  },
+
+  "legals": ""
 }

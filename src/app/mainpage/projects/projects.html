@@ -3,14 +3,14 @@
 <div id="purple-line"></div>
 <h2>Portfolio</h2>
 <p id="project-intro">
-  Explore a selection of my work here - Interact with projects to see my skills in action.
+  {{'projects.intro' | translate}}
 </p>
 <section id="project-list">
 @for (item of project; track $index) {
   <div class="frame" style="background-image: url({{item.img}});">
     <div class="project-buttons">
       <a class="github-link" target="_blank" href="">Github</a>
-      <a class="test-link" target="_blank" href="">Live test</a>
+      <a class="test-link" target="_blank" href="">Live {{'projects.test' | translate}}</a>
     </div>
     <div class="description">
       <h4>{{item.name}}</h4>

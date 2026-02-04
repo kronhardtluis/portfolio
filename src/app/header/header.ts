@@ -12,7 +12,13 @@ export class Header {
 
   useLanguage(language: string): void {
       this.translate.use(language);
-    document.getElementById('de')!.classList.toggle('chosen');
-    document.getElementById('en')!.classList.toggle('chosen');
+      const deRef: HTMLElement = document.getElementById('de')!;
+      const enRef: HTMLElement = document.getElementById('en')!;
+
+      
+      if (language = language) {
+    deRef.classList.toggle('chosen');
+    enRef.classList.toggle('chosen');
+      }
   }
 }

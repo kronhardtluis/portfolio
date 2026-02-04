@@ -1,33 +1,32 @@
 <img class="background" src="assets/img/contact-bg.png" alt="">
 
 <div id="title">
-  <h2>Contact</h2>
+  <h2>{{'contact.title' | translate}}</h2>
   <div id="green-line"></div>
 </div>
 
 <div id="form">
   <div id="inducement">
     <div id="blue-line"></div>
-    <h4>Got a problem to solve?</h4>
+    <h4>{{'contact.subtitle' | translate}}</h4>
     <p>
       Anreiz mich zu kontaktieren.
       <br /><br />
-      Need a Frontend developer? <b>Contact me!</b>
+      {{'contact.needed' | translate}} <b>{{'contact.me' | translate}}</b>
     </p>
   </div>
 
   <div id="mailing">
-    <input class="text-input" id="name" type="text" placeholder="Your name" />
-    <input class="text-input" id="email" type="text" placeholder="Your email" />
-    <textarea class="text-input" id="message" type="text" placeholder="Your message"></textarea>
+    <input class="text-input" id="name" type="text" placeholder="{{'contact.name' | translate}}" />
+    <input class="text-input" id="email" type="text" placeholder="{{'contact.mail' | translate}}" />
+    <textarea class="text-input" id="message" type="text" placeholder="{{'contact.message' | translate}}"></textarea>
     <div id="checkbox">
       <input type="checkbox" />
       <p>
-        I´ve read the<a href=""> legals </a>and agree to the processing of my data as
-        outlined.
+        {{'contact.have' | translate}}<a href=""> {{'contact.legals' | translate}} </a>{{'contact.agree' | translate}}
       </p>
     </div>
-    <button id="send-button">Send message</button>
+    <button id="send-button">{{'contact.send' | translate}}</button>
   </div>
 </div>
 
