@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 
-//#region Interfaces
 interface projectFace {
   name: string;
   description: string;
   technologys: string;
   img: string
 }
-//#endregion
 
 @Component({
   selector: 'app-projects',
