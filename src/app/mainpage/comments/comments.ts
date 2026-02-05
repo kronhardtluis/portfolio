@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface commentFace {
   name: string;
@@ -9,7 +10,7 @@ interface commentFace {
 
 @Component({
   selector: 'app-comments',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './comments.html',
   styleUrl: './comments.scss',
 })

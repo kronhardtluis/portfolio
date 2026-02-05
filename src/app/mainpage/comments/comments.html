@@ -1,5 +1,6 @@
 <div id="commentary">
-  @for (item of allComments; track $index) {
+
+  @for (item of {{ 'comments' | translate }}; track $index) {
     <div id="comment-frame">
       <i>"</i>
       <p id="citation">{{item.comment}}</p>
@@ -13,6 +14,7 @@
       <div id="picture-line"></div>
     </div>
   }
+
 </div>
 <div id="arrows">
   <button><img class="left arrow" src="assets/icons/arrow-green.png" alt="arrow-left" /></button>
