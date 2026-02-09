@@ -1,0 +1,15 @@
+@use '../../../public/assets/styles/all-styles.scss' as all;
+#legals {
+  max-width: 1920px;
+  margin-inline: 5%;
+}
+
+h1 {
+  text-align: center;
+  background-color: all.$myBackground;
+  color: all.$myGreen;
+}
+
+#myLine{
+  background-color: all.$myPurple;
+}

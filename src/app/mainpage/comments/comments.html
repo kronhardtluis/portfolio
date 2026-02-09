@@ -1,6 +1,6 @@
 <div id="commentary">
 
-  @for (item of {{ 'comments' | translate }}; track $index) {
+  @for (item of allComments; track $index) {
     <div id="comment-frame">
       <i>"</i>
       <p id="citation">{{item.comment}}</p>
