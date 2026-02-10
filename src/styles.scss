@@ -12,3 +12,11 @@ app-root {
 body {
     background: all.$myBackground;
 }
+
+app-mainpage {
+    display: flex;
+    flex-direction: column;
+    gap: 10dvh;
+    max-width: 1920px;
+    overflow-x: hidden;
+}

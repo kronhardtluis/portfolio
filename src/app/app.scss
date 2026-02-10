@@ -13,14 +13,6 @@ app-header {
     max-width: 1920px;
 }
 
-app-mainpage {
-    display: flex;
-    flex-direction: column;
-    gap: 10dvh;
-    max-width: 1920px;
-    overflow-x: hidden;
-}
-
 app-footer {
     border-top: 5px solid all.$myGreen;
     width: 100%;

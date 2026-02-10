@@ -10,7 +10,7 @@
     <div id="blue-line"></div>
     <h4>{{'contact.subtitle' | translate}}</h4>
     <p>
-      Anreiz mich zu kontaktieren.
+      {{'contact.why' | translate}}
       <br /><br />
       {{'contact.needed' | translate}} <b>{{'contact.me' | translate}}</b>
     </p>
@@ -23,12 +23,11 @@
     <div id="checkbox">
       <input type="checkbox" />
       <p>
-        {{'contact.have' | translate}}<a href=""> {{'contact.legals' | translate}} </a>{{'contact.agree' | translate}}
+        {{'contact.have' | translate}}<a routerLink="legals"> {{'contact.legals' | translate}} </a>{{'contact.agree' | translate}}
       </p>
     </div>
     <button id="send-button">{{'contact.send' | translate}}</button>
   </div>
 </div>
 
-<img id="scroll" class="scroll" src="assets/icons/scroll-up.png" alt="">
-<!-- <img id="scrollH" class="scroll" src="assets/icons/scroll-hover.png" alt=""> -->
+<a id="scroll" href="#head"><img src="assets/icons/scroll-up.png" alt=""></a>

@@ -86,6 +86,10 @@
 
       a {
         color: all.$myPurple;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
@@ -96,14 +100,20 @@
 }
 
 
-.scroll {
+#scroll {
   position: absolute;
   width: 48px;
   height: 48px;
   bottom: 10%;
   right: 5%;
+  
   &:hover {
     cursor: pointer;
     animation: jump 1s infinite;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
