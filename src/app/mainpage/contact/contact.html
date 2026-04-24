@@ -5,7 +5,7 @@
   <div id="green-line"></div>
 </div>
 
-<div id="form">
+<div id="form-explanation">
   <div id="inducement">
     <div id="blue-line"></div>
     <h4>{{'contact.subtitle' | translate}}</h4>
@@ -16,18 +16,28 @@
     </p>
   </div>
 
-  <div id="mailing">
+  <form id="mailing">
     <input class="text-input" id="name" type="text" placeholder="{{'contact.name' | translate}}" />
     <input class="text-input" id="email" type="text" placeholder="{{'contact.mail' | translate}}" />
     <textarea class="text-input" id="message" type="text" placeholder="{{'contact.message' | translate}}"></textarea>
-    <div id="checkbox">
-      <input type="checkbox" />
+    <div (click)="toggleCheckbox()" id="checkbox-div">
+      <button id="checkbox-button">
+        @if(!checkbox){
+          <img src="assets/icons/checkbox.png" alt="checkbox">
+        } @else {
+          <img src="assets/icons/checkbox-checked.png" alt="checkbox">
+        }
+      </button>
       <p>
         {{'contact.have' | translate}}<a routerLink="legals"> {{'contact.legals' | translate}} </a>{{'contact.agree' | translate}}
       </p>
     </div>
-    <button id="send-button">{{'contact.send' | translate}}</button>
-  </div>
+    @if(!checkbox){
+      <div id="send-preview">{{'contact.send' | translate}}</div>
+    } @else {
+      <button id="send-button">{{'contact.send' | translate}}</button>
+    }
+  </form>
 </div>
 
 <a id="scroll" href="#head"><img src="assets/icons/scroll-up.png" alt=""></a>

@@ -1,6 +1,6 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
-.background{
+.background {
   position: absolute;
   right: 0;
   top: 0%;
@@ -21,7 +21,7 @@
   @include all.myH2();
 }
 
-#form {
+#form-explanation {
   display: flex;
   justify-content: space-between;
 
@@ -69,18 +69,33 @@
       overflow: hidden;
     }
 
-    #checkbox {
+    #checkbox-div {
       display: flex;
       align-items: center;
       gap: 8px;
       margin-block: 8px;
 
-      input {
-        width: 1rem;
-        height: 1rem;
+      &:hover {
+        cursor: pointer;
 
-        &:hover {
-          cursor: pointer;
+        img {
+          border-radius: 50%;
+          background-color: rgba(94, 119, 170, 0.548);
+        }
+      }
+
+      #checkbox-button {
+        width: 40px;
+        height: 40px;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(94, 119, 170, 0.548);
+          }
         }
       }
 
@@ -89,16 +104,28 @@
 
         &:hover {
           cursor: pointer;
+          color: all.$myBlue;
         }
       }
     }
 
-    button {
-      @include all.myButton($bg-color: rgb(182, 182, 182), $h-color: rgb(182, 182, 182));
+    #send-preview {
+      font-size: 1.25rem;
+      background-color: rgb(182, 182, 182);
+      padding-block: 0.6rem;
+      padding-inline: 1.75rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    #send-button {
+      @include all.myButton($bg-color: all.$myGreen, $h-color: all.$myPurple);
     }
   }
 }
-
 
 #scroll {
   position: absolute;
@@ -106,7 +133,7 @@
   height: 48px;
   bottom: 10%;
   right: 5%;
-  
+
   &:hover {
     cursor: pointer;
     animation: jump 1s infinite;
