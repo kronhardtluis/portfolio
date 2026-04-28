@@ -72,6 +72,8 @@
     #checkbox-div {
       display: flex;
       align-items: center;
+      text-align: start;
+      width: 100%;
       gap: 8px;
       margin-block: 8px;
 
@@ -84,18 +86,14 @@
         }
       }
 
-      #checkbox-button {
+      img {
         width: 40px;
         height: 40px;
+        border-radius: 50%;
 
-        img {
-          width: 100%;
-          border-radius: 50%;
-
-          &:hover {
-            cursor: pointer;
-            background-color: rgba(94, 119, 170, 0.548);
-          }
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(94, 119, 170, 0.548);
         }
       }
 
@@ -115,6 +113,7 @@
       padding-block: 0.6rem;
       padding-inline: 1.75rem;
       border-radius: 0.5rem;
+      margin-top: 16px;
 
       &:hover {
         cursor: not-allowed;
@@ -123,6 +122,7 @@
 
     #send-button {
       @include all.myButton($bg-color: all.$myGreen, $h-color: all.$myPurple);
+      margin-top: 16px;
     }
   }
 }
