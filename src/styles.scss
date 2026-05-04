@@ -17,6 +17,6 @@ app-mainpage {
     display: flex;
     flex-direction: column;
     gap: 10dvh;
-    max-width: 1920px;
+    max-width: clamp(100px, 100%, 1920px);
     overflow-x: hidden;
 }

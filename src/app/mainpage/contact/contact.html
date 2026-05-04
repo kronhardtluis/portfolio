@@ -27,7 +27,9 @@
           <img src="assets/icons/checkbox-checked.png" alt="checkbox">
         }
       <p>
-        {{'contact.have' | translate}}<a routerLink="legals"> {{'contact.legals' | translate}} </a>{{'contact.agree' | translate}}
+        {{'contact.have' | translate}}
+        <a routerLink="legals" (click)="$event.stopPropagation()"> {{'contact.legals' | translate}} </a>
+        {{'contact.agree' | translate}}
       </p>
     </button>
     @if(!checkbox){
@@ -38,4 +40,4 @@
   </form>
 </div>
 
-<a id="scroll" href="#head"><img src="assets/icons/scroll-up.png" alt=""></a>
+<button (click)="scrollUp()" id="scroll"><img src="assets/icons/scroll-up.png" alt="arrow-up"></button>

@@ -15,4 +15,8 @@ export class Contact {
   toggleCheckbox():void {
     this.checkbox = !this.checkbox;
   }
+
+  scrollUp():void {
+    window.scroll({ top: 0, behavior: 'smooth' })
+  }
 }
