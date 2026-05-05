@@ -20,7 +20,7 @@ export class Comments {
     {
       name: 'Mona Lisa',
       comment:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sequi fugit nostrum laudantium ab eaque debitis id nisi dolore nulla!',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       profession: 'Model',
       img: 'assets/img/lisa.jpg',
     },
@@ -34,7 +34,7 @@ export class Comments {
     {
       name: 'Mirjam Kronhardt',
       comment:
-        'My husband should spend more time with his family, but he has so much fun with Coding.',
+        'He should spend more time with his family, but he has so much fun with Coding.',
       profession: 'Wife',
       img: 'assets/img/wife.jpg',
     },

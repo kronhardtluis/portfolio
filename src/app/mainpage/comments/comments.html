@@ -1,25 +1,18 @@
 <div id="commentary">
-
   @for (item of allComments; track $index) {
-    <div id="comment-frame">
-      <i>"</i>
-      <p id="citation">{{item.comment}}</p>
-      <div id="colleague">
-        <div id="blue-line"></div>
-        <p>{{item.name}} - {{item.profession}}</p>
+    <div class="comment-box">
+      <div id="comment-frame">
+        <i>"</i>
+        <p id="citation">{{ item.comment }}</p>
+        <div id="colleague">
+          <div id="blue-line"></div>
+          <p>{{ item.name }} - {{ item.profession }}</p>
+        </div>
       </div>
-    </div>
-    <div id="colleague-picture">
-      <img id="portrait" src="{{item.img}}" alt="" />
-      <div id="picture-line"></div>
+      <div id="colleague-picture">
+        <img id="portrait" src="{{ item.img }}" alt="" />
+      </div>
+    <div id="picture-line"></div>
     </div>
   }
-
-</div>
-<div id="arrows">
-  <button><img class="left arrow" src="assets/icons/arrow-green.png" alt="arrow-left" /></button>
-  <button class="dot" id="dot1"></button>
-  <button class="dot" id="dot2"></button>
-  <button class="dot" id="dot3"></button>
-  <button><img class="arrow" src="assets/icons/arrow-green.png" alt="arrow-right" /></button>
 </div>
