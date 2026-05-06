@@ -2,7 +2,7 @@
 
 #commentary {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   width: 100%;
   height: fit-content;
   gap: 20%;
@@ -21,9 +21,10 @@
 
   &::-webkit-scrollbar {
     display: none;
+    scrollbar-width: 90%;
   }
 
-  &::scroll-button(right),              //funktioniert mit firefox nicht
+  &::scroll-button(right),
   &::scroll-button(left) {
     content: url('../../../../public/assets/icons/arrow-green.png');
     background: none;
