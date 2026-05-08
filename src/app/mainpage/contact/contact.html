@@ -1,43 +1,78 @@
-<img class="background" src="assets/img/contact-bg.png" alt="">
+<img class="background" src="assets/img/contact-bg.png" alt="" />
 
 <div id="title">
-  <h2>{{'contact.title' | translate}}</h2>
+  <h2>{{ 'contact.title' | translate }}</h2>
   <div id="green-line"></div>
 </div>
 
 <div id="form-explanation">
   <div id="inducement">
     <div id="blue-line"></div>
-    <h4>{{'contact.subtitle' | translate}}</h4>
+    <h4>{{ 'contact.subtitle' | translate }}</h4>
     <p>
-      {{'contact.why' | translate}}
+      {{ 'contact.why' | translate }}
       <br /><br />
-      {{'contact.needed' | translate}} <b>{{'contact.me' | translate}}</b>
+      {{ 'contact.needed' | translate }} <b>{{ 'contact.me' | translate }}</b>
     </p>
   </div>
 
   <form id="mailing">
-    <input class="text-input" id="name" type="text" placeholder="{{'contact.name' | translate}}" />
-    <input class="text-input" id="email" type="text" placeholder="{{'contact.mail' | translate}}" />
-    <textarea class="text-input" id="message" type="text" placeholder="{{'contact.message' | translate}}"></textarea>
+    <input
+      class="text-input"
+      id="name"
+      type="text"
+      placeholder="{{ 'contact.name' | translate }}"
+      [formControl]="name"
+    />
+    <p class="error-msg" [style.visibility]="name.touched && !name.valid ? 'visible' : 'hidden'">
+      {{ 'contact.error_name' | translate }}
+    </p>
+    <input
+      class="text-input"
+      id="email"
+      type="text"
+      placeholder="{{ 'contact.mail' | translate }}"
+      [formControl]="email"
+    />
+    <p class="error-msg" [style.visibility]="email.touched && !email.valid ? 'visible' : 'hidden'">
+      {{ 'contact.error_mail' | translate }}
+    </p>
+    <textarea
+      class="text-input"
+      id="message"
+      type="text"
+      placeholder="{{ 'contact.message' | translate }}"
+      [formControl]="message"
+    ></textarea>
+    <p
+      class="error-msg"
+      [style.visibility]="message.touched && !message.valid ? 'visible' : 'hidden'"
+    >
+      {{ 'contact.error_message' | translate }}
+    </p>
     <button type="button" (click)="toggleCheckbox()" id="checkbox-div">
-        @if(!checkbox){
-          <img src="assets/icons/checkbox.png" alt="checkbox">
-        } @else {
-          <img src="assets/icons/checkbox-checked.png" alt="checkbox">
-        }
+      @if (!checkbox.value) {
+        <img src="assets/icons/checkbox.png" alt="checkbox" />
+      } @else {
+        <img src="assets/icons/checkbox-checked.png" alt="checkbox" />
+      }
       <p>
-        {{'contact.have' | translate}}
-        <a routerLink="legals" (click)="$event.stopPropagation()"> {{'contact.legals' | translate}} </a>
-        {{'contact.agree' | translate}}
+        {{ 'contact.have' | translate }}
+        <a routerLink="legals"> {{ 'contact.legals' | translate }} </a>
+        {{ 'contact.agree' | translate }}
       </p>
     </button>
-    @if(!checkbox){
-      <div id="send-preview">{{'contact.send' | translate}}</div>
+      <p class="error-msg" [style.visibility]="checkbox.dirty && checkbox.invalid ? 'visible' : 'hidden'">
+        {{ 'contact.error_agree' | translate }}
+      </p>
+    @if (!checkbox.value) {
+      <div id="send-preview">{{ 'contact.send' | translate }}</div>
     } @else {
-      <button id="send-button">{{'contact.send' | translate}}</button>
+      <button id="send-button" (click)="updateForm()">{{ 'contact.send' | translate }}</button>
     }
   </form>
 </div>
 
-<button (click)="scrollUp()" id="scroll"><img src="assets/icons/scroll-up.png" alt="arrow-up"></button>
+<button (click)="scrollUp()" id="scroll">
+  <img src="assets/icons/scroll-up.png" alt="arrow-up" />
+</button>

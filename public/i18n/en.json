@@ -33,27 +33,6 @@
     "test": "test"
   },
 
-  "comments": [
-    {
-      "name": "Mona Lisa",
-      "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sequi fugit nostrum laudantium ab eaque debitis id nisi dolore nulla!",
-      "profession": "Model",
-      "img": "assets/img/lisa.jpg"
-    },
-    {
-      "name": "Einstein Albert",
-      "comment": "E equals m times c squared.",
-      "profession": "Thinker",
-      "img": "assets/img/einstein.jpg"
-    },
-    {
-      "name": "Mirjam Kronhardt",
-      "comment": "My husband should spend more time with his family, but he has so much fun with Coding.",
-      "profession": "Wife",
-      "img": "assets/img/wife.jpg"
-    }
-  ],
-
   "contact": {
     "title": "Contact",
     "subtitle": "Got a problem to solve?",
@@ -63,6 +42,10 @@
     "name": "Your name",
     "mail": "Your email",
     "message": "Your message",
+    "error_name": "Your name is required.",
+    "error_mail": "Please enter a valid email address.",
+    "error_message": "Your message is empty.",
+    "error_agree": "Please agree the legal notice.",
     "have": "I've read the ",
     "legals": "legal notice ",
     "agree": "and agree to the processing of my data as outlined.",

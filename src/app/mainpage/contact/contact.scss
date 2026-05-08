@@ -63,6 +63,18 @@
       }
     }
 
+    .error-msg {
+      //   visibility: hidden;
+      //   font-size: clamp(14px, 0.75rem, 20px);
+
+      //   &-active {
+      visibility: visible;
+      font-size: clamp(14px, 0.75rem, 20px);
+      color: red;
+      align-self: start;
+      // }
+    }
+
     #message {
       height: 300px;
       border-radius: 12px 12px 0 12px;
@@ -98,7 +110,7 @@
       }
 
       a {
-        color: all.$myPurple;
+        color: all.$myGreen;
 
         &:hover {
           cursor: pointer;
