@@ -16,15 +16,15 @@
     </p>
   </div>
 
-  <form id="mailing">
+  <form id="mailing" [formGroup]="mailing" (ngSubmit)="formSubmit()">
     <input
       class="text-input"
       id="name"
       type="text"
       placeholder="{{ 'contact.name' | translate }}"
-      [formControl]="name"
+      formControlName="name"
     />
-    <p class="error-msg" [style.visibility]="name.touched && !name.valid ? 'visible' : 'hidden'">
+    <p class="error-msg" [style.visibility]="mailing.get('name')?.touched && !mailing.get('name')?.valid ? 'visible' : 'hidden'">
       {{ 'contact.error_name' | translate }}
     </p>
     <input
@@ -32,9 +32,9 @@
       id="email"
       type="text"
       placeholder="{{ 'contact.mail' | translate }}"
-      [formControl]="email"
+      formControlName="email"
     />
-    <p class="error-msg" [style.visibility]="email.touched && !email.valid ? 'visible' : 'hidden'">
+    <p class="error-msg" [style.visibility]="mailing.get('email')?.touched && !mailing.get('email')?.valid ? 'visible' : 'hidden'">
       {{ 'contact.error_mail' | translate }}
     </p>
     <textarea
@@ -42,16 +42,16 @@
       id="message"
       type="text"
       placeholder="{{ 'contact.message' | translate }}"
-      [formControl]="message"
+      formControlName="message"
     ></textarea>
     <p
       class="error-msg"
-      [style.visibility]="message.touched && !message.valid ? 'visible' : 'hidden'"
+      [style.visibility]="mailing.get('message')?.touched && !mailing.get('message')?.valid ? 'visible' : 'hidden'"
     >
       {{ 'contact.error_message' | translate }}
     </p>
     <button type="button" (click)="toggleCheckbox()" id="checkbox-div">
-      @if (!checkbox.value) {
+      @if (!mailing.get('checkbox')?.value) {
         <img src="assets/icons/checkbox.png" alt="checkbox" />
       } @else {
         <img src="assets/icons/checkbox-checked.png" alt="checkbox" />
@@ -62,13 +62,13 @@
         {{ 'contact.agree' | translate }}
       </p>
     </button>
-      <p class="error-msg" [style.visibility]="checkbox.dirty && checkbox.invalid ? 'visible' : 'hidden'">
+      <p class="error-msg" [style.visibility]="mailing.get('checkbox')?.dirty && mailing.get('checkbox')?.invalid ? 'visible' : 'hidden'">
         {{ 'contact.error_agree' | translate }}
       </p>
-    @if (!checkbox.value) {
+    @if (!mailing.get('checkbox')?.value) {
       <div id="send-preview">{{ 'contact.send' | translate }}</div>
     } @else {
-      <button id="send-button" (click)="updateForm()">{{ 'contact.send' | translate }}</button>
+      <button type="submit" id="send-button">{{ 'contact.send' | translate }}</button>
     }
   </form>
 </div>

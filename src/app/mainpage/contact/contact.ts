@@ -10,32 +10,39 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact.scss',
 })
 export class Contact {
-  name: FormControl = new FormControl('', {
+  mailing: FormGroup = new FormGroup({
+
+    name: new FormControl('', {
     validators: [Validators.required, Validators.minLength(2), Validators.pattern(/^[\p{L}\p{Zs}\-]+$/u)]
-  });
+  }),
 
-  email: FormControl = new FormControl('', {
+  email: new FormControl('', {
     validators: [Validators.required, Validators.email]
-  });
+  }),
 
-  message: FormControl = new FormControl('', {
+  message: new FormControl('', {
     validators: [Validators.required, Validators.minLength(3)]
-  });
+  }),
 
-  checkbox: FormControl = new FormControl(false, Validators.requiredTrue);
+  checkbox: new FormControl(false, Validators.requiredTrue)
+  })
+
 
   toggleCheckbox():void {
-    this.checkbox.setValue(!this.checkbox.value);
-    this.checkbox.markAsDirty();
+    this.mailing.get('checkbox')?.setValue(!this.mailing.get('checkbox')?.value);
+    this.mailing.get('checkbox')?.markAsDirty();
   }
 
   scrollUp():void {
     window.scroll({ top: 0, behavior: 'smooth' })
   }
 
+  formSubmit():void {
+    console.log(this.mailing.value);
+    this.updateForm();
+  }
+
   updateForm():void {
-    this.name.setValue("");
-    this.email.setValue("");
-    this.message.setValue("");
+    this.mailing.reset();
   }
 }
