@@ -65,10 +65,12 @@
       <p class="error-msg" [style.visibility]="mailing.get('checkbox')?.dirty && mailing.get('checkbox')?.invalid ? 'visible' : 'hidden'">
         {{ 'contact.error_agree' | translate }}
       </p>
-    @if (!mailing.get('checkbox')?.value) {
+    @if (!mailing.valid) {
       <div id="send-preview">{{ 'contact.send' | translate }}</div>
+      <p class="error-msg mid">Unable to send (yet).</p>
     } @else {
       <button type="submit" id="send-button">{{ 'contact.send' | translate }}</button>
+      <p class="error-msg mid">Unable to send (yet).</p>
     }
   </form>
 </div>

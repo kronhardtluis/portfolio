@@ -64,15 +64,15 @@
     }
 
     .error-msg {
-      //   visibility: hidden;
-      //   font-size: clamp(14px, 0.75rem, 20px);
-
-      //   &-active {
       visibility: visible;
       font-size: clamp(14px, 0.75rem, 20px);
       color: red;
       align-self: start;
-      // }
+
+      &.mid {
+        align-self: center;
+        margin-top: 8px;
+      }
     }
 
     #message {
