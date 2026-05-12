@@ -45,7 +45,7 @@
     "error_name": "Your name is required.",
     "error_mail": "Please enter a valid email address.",
     "error_message": "Your message is empty.",
-    "error_agree": "Please agree the legal notice.",
+    "error_agree": "Please agree the privacy policy.",
     "have": "I've read the ",
     "legals": "legal notice ",
     "agree": "and agree to the processing of my data as outlined.",

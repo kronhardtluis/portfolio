@@ -11,38 +11,40 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class Contact {
   mailing: FormGroup = new FormGroup({
-
     name: new FormControl('', {
-    validators: [Validators.required, Validators.minLength(2), Validators.pattern(/^[\p{L}\p{Zs}\-]+$/u)]
-  }),
+      validators: [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.pattern(/^[\p{L}\p{Zs}\-]+$/u),
+      ],
+    }),
 
-  email: new FormControl('', {
-    validators: [Validators.required, Validators.email]
-  }),
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+    }),
 
-  message: new FormControl('', {
-    validators: [Validators.required, Validators.minLength(3)]
-  }),
+    message: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(3)],
+    }),
 
-  checkbox: new FormControl(false, Validators.requiredTrue)
-  })
+    checkbox: new FormControl(false, Validators.requiredTrue),
+  });
 
-
-  toggleCheckbox():void {
+  toggleCheckbox(): void {
     this.mailing.get('checkbox')?.setValue(!this.mailing.get('checkbox')?.value);
     this.mailing.get('checkbox')?.markAsDirty();
   }
 
-  scrollUp():void {
-    window.scroll({ top: 0, behavior: 'smooth' })
+  scrollUp(): void {
+    window.scroll({ top: 0, behavior: 'smooth' });
   }
 
-  formSubmit():void {
+  formSubmit(): void {
     console.log(this.mailing.value);
     this.updateForm();
   }
 
-  updateForm():void {
+  updateForm(): void {
     this.mailing.reset();
   }
 }
