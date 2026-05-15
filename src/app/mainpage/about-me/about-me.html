@@ -1,25 +1,27 @@
-<img class="background" src="assets/img/me-bg.png" alt="">
 <article>
-  <h2>{{'about_me.title' | translate}}</h2>
+  <h2>{{ 'about_me.title' | translate }}</h2>
   <p>
-    {{'about_me.name' | translate}}<br>
-    {{'about_me.fun' | translate}}<br>
-    {{'about_me.goal' | translate}}
+    {{ 'about_me.name' | translate }}<br />
+    {{ 'about_me.fun' | translate }}<br />
+    {{ 'about_me.goal' | translate }}
   </p>
   <div class="info">
     <img src="assets/icons/pin.png" alt="" />
-    <p>{{'about_me.goal' | translate}}</p>
+    <p>{{ 'about_me.goal' | translate }}</p>
   </div>
   <div class="info">
     <img src="assets/icons/lamp.png" alt="" />
-    <p>{{'about_me.motivation' | translate}}</p>
+    <p>{{ 'about_me.motivation' | translate }}</p>
   </div>
   <div class="info">
     <img id="puzzle" src="assets/icons/puzzle.png" alt="" />
     <p>
-      {{'about_me.learn' | translate}}
+      {{ 'about_me.learn' | translate }}
     </p>
   </div>
 </article>
 
-<img id="myself" src="assets/img/me.png" alt="me">
+<div id="myself">
+  <img class="background" src="assets/img/me-bg.png" alt="" />
+  <img class="me" src="assets/img/me.png" alt="me" />
+</div>
