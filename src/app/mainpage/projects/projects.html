@@ -9,7 +9,7 @@
 @for (item of project; track $index) {
   <div class="frame" style="background-image: url({{item.img}});">
     <div class="project-buttons">
-      <a class="github-link" target="_blank" href="">Github</a>
+      <a class="github-link" target="_blank" href="{{item.gitLink}}">Github</a>
       <a class="test-link" target="_blank" href="">Live {{'projects.test' | translate}}</a>
     </div>
     <div class="description">
