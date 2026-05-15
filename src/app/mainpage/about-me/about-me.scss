@@ -46,9 +46,9 @@ article {
 
   .background {
     position: absolute;
-    top: 0;
-    right: calc(0% - 280px);
     height: 140%;
+    max-height: 1000px;
     z-index: 0;
+    translate: -25% 25%;
   }
 }
