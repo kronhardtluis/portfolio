@@ -40,8 +40,8 @@
   .frame {
     border-radius: 16px;
     border: 2px solid all.$myGreen;
-    width: clamp(300px, 40dvw, 640px);
-    height: clamp(300px, 40dvw, 640px);
+    width: clamp(300px, 40dvw, 600px);
+    height: clamp(300px, 40dvw, 600px);
     content-visibility: hidden;
     background-position: center;
     background-size: cover;
