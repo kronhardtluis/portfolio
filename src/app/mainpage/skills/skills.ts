@@ -8,5 +8,11 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './skills.scss',
 })
 export class Skills {
+  bubbleVisible: boolean = false;
+  firstLoad:boolean = true;
 
+  bubbleEvent(hover: boolean): void {
+    this.bubbleVisible = hover;
+    this.firstLoad = false;
+  }
 }

@@ -8,7 +8,7 @@
 
   div {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 10px;
@@ -22,6 +22,51 @@
     img {
       height: 2.5rem;
       width: auto;
+    }
+
+    #bubble {
+      position: absolute;
+      bottom: 25%;
+      translate: 25% -100%;
+      height: 60%;
+      width: fit-content;
+      padding: 16px 32px;
+      border-radius: 20px;
+      background-color: whitesmoke;
+      flex-direction: column;
+      color: black;
+      gap: 0;
+      opacity: 1;
+      visibility: hidden;
+      pointer-events: none;
+
+      &.fade-in {
+        animation: fadeIn 0.5s forwards;
+        visibility: visible;
+      }
+
+      &.fade-out {
+        animation: fadeOut 0.5s forwards;
+        visibility: visible;
+      }
+
+      img {
+        height: 2rem;
+      }
+
+      p {
+        font-size: clamp(16px, 0.7rem, 24px);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 95%;
+        left: 20%;
+        border-width: 16px;
+        border-style: solid;
+        border-color: whitesmoke transparent transparent transparent;
+      }
     }
   }
 }

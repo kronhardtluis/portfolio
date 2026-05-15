@@ -41,18 +41,25 @@
   </div>
   <div class="placeholder"></div>
   <div class="placeholder"></div>
-  <div id="learning">
+  <div id="learning" (mouseenter)="bubbleEvent(false)" (mouseleave)="bubbleEvent(true)">
     <img src="assets/icons/learning.png" alt="" />
-    <p>{{'skills.learning' | translate}}</p>
+    <p>{{ 'skills.learning' | translate }}</p>
+    <div id="bubble" [class.fade-in]="bubbleVisible" [class.fade-out]="!bubbleVisible && !firstLoad">
+      <img src="assets/icons/angular-color.png" alt="Angular-Logo" />
+      <p>Angular</p>
+    </div>
   </div>
 </section>
 
 <article>
   <h2>Skills</h2>
   <div id="blue-line"></div>
-  <p>{{'skills.experience' | translate}}</p>
-  <h4>{{'skills.looking' | translate}}<span>{{'skills.another' | translate}}</span>?</h4>
-  <p>{{'skills.new_skills' | translate}}</p>
-  <br><br>
-  <a href="#contact">{{'skills.button' | translate}}</a>
+  <p>{{ 'skills.experience' | translate }}</p>
+  <h4>
+    {{ 'skills.looking' | translate }}<span>{{ 'skills.another' | translate }}</span
+    >?
+  </h4>
+  <p>{{ 'skills.new_skills' | translate }}</p>
+  <br /><br />
+  <a href="#contact">{{ 'skills.button' | translate }}</a>
 </article>
