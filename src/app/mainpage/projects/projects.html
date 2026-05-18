@@ -1,24 +1,24 @@
-<img class="background" id="blue" src="assets/img/portfolio-b-bg.png" alt="">
-<img class="background" id="green" src="assets/img/portfolio-g-bg.png" alt="">
+<img class="background" id="blue" src="assets/img/portfolio-b-bg.png" alt="" />
+<img class="background" id="green" src="assets/img/portfolio-g-bg.png" alt="" />
 <div id="purple-line"></div>
 <h2>Portfolio</h2>
 <p id="project-intro">
-  {{'projects.intro' | translate}}
+  {{ 'projects.intro' | translate }}
 </p>
 <section id="project-list">
-@for (item of project; track $index) {
-  <div class="frame" style="background-image: url({{item.img}});">
-    <div class="project-buttons">
-      <a class="github-link" target="_blank" href="{{item.gitLink}}">Github</a>
-      <a class="test-link" target="_blank" href="">Live {{'projects.test' | translate}}</a>
+  @for (item of project; track $index) {
+    <div class="frame" style="background-image: url({{item.img}});">
+      <div class="project-buttons">
+        <a class="github-link" target="_blank" href="{{ item.gitLink }}">Github</a>
+        <a class="test-link" target="_blank" href="{{ item.webLink }}">Live {{ 'projects.test' | translate }}</a>
+      </div>
+      <div class="description">
+        <h4>{{ item.name }}</h4>
+        <p>
+          {{ item.description }}
+        </p>
+        <p class="used-technologies">{{ item.technologys }}</p>
+      </div>
     </div>
-    <div class="description">
-      <h4>{{item.name}}</h4>
-      <p>
-        {{item.description}}
-      </p>
-      <p class="used-technologies">{{item.technologys}}</p>
-    </div>
-  </div>
-}
+  }
 </section>

@@ -7,6 +7,7 @@ interface projectFace {
   technologys: string;
   img: string;
   gitLink: string;
+  webLink: string;
 }
 
 @Component({
@@ -23,14 +24,16 @@ export class Projects {
       description: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
       technologys: "Angular | TypeScript | HTML | CSS | Firebase",
       img: '/assets/img/PolloLoco.png',
-      gitLink: 'https://github.com/kronhardtluis/El-Pollo-Loco'
+      gitLink: 'https://github.com/kronhardtluis/El-Pollo-Loco',
+      webLink: ''
     },
     {
       name: "Join",
       description: "Task manager inspired by Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       technologys: "Angular | TypeScript | HTML | CSS | Firebase",
       img: '/assets/img/join-laptop.png',
-      gitLink: 'https://github.com/kronhardtluis/join'
+      gitLink: 'https://github.com/kronhardtluis/join',
+      webLink: 'https://luis-kronhardt.com/join/'
     }
   ]
 }
