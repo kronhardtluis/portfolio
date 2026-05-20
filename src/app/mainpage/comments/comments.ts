@@ -18,10 +18,10 @@ export class Comments {
 
   allComments: commentFace[] = [
     {
-      name: 'Mona Lisa',
+      name: 'A. Groblicki',
       comment:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      profession: 'Model',
+        'Luis ist ein zuverlässiges und freundliches Teammitglied, das stets großes Engagement und professionelle Unterstützung bewiesen hat. Ich habe seine Geduld und seine strukturierte Arbeitsweise sehr geschätzt.',
+      profession: 'Klassenkamerad',
       img: 'assets/img/lisa.jpg',
     },
     {
@@ -30,13 +30,6 @@ export class Comments {
         'E ist gleich m mal c Quadrat.',
       profession: 'Thinker',
       img: 'assets/img/einstein.jpg',
-    },
-    {
-      name: 'Mirjam Kronhardt',
-      comment:
-        'He should spend more time with his family, but he has so much fun with Coding.',
-      profession: 'Wife',
-      img: 'assets/img/wife.jpg',
     },
   ];
 }
