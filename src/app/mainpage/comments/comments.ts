@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import deTranslations from '../../../../public/i18n/de.json';
 
-interface commentFace {
+export interface CommentFace {
   name: string;
   comment: string;
   profession: string;
@@ -9,27 +11,32 @@ interface commentFace {
 
 @Component({
   selector: 'app-comments',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './comments.html',
   styleUrl: './comments.scss',
 })
 
 export class Comments {
-
-  allComments: commentFace[] = [
+  comments: CommentFace[] = [
     {
-      name: 'A. Groblicki',
-      comment:
-        'Luis ist ein zuverlässiges und freundliches Teammitglied, das stets großes Engagement und professionelle Unterstützung bewiesen hat. Ich habe seine Geduld und seine strukturierte Arbeitsweise sehr geschätzt.',
-      profession: 'Klassenkamerad',
-      img: 'assets/img/lisa.jpg',
-    },
-    {
-      name: 'Einstein Albert',
-      comment:
-        'E ist gleich m mal c Quadrat.',
-      profession: 'Thinker',
-      img: 'assets/img/einstein.jpg',
+      name: '',
+      comment: '',
+      profession: '',
+      img: '',
     },
   ];
+
+  ngOnInit() {
+    this.comments = [];
+    const commentsData = deTranslations.comments;
+    for (const key of Object.keys(commentsData)) {
+      const personData = (commentsData as any)[key];
+      this.comments.push({
+        name: key,
+        comment: personData.comment,
+        profession: personData.profession,
+        img: personData.img,
+      });
+    }
+  }
 }

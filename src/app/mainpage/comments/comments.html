@@ -1,18 +1,22 @@
 <div id="commentary">
-  @for (item of allComments; track $index) {
+  @for (item of comments; track item.name) {
     <div class="comment-box">
       <div id="comment-frame">
         <i>"</i>
-        <p id="citation">{{ item.comment }}</p>
+        <p id="citation">{{ 'comments.' + item.name + '.comment' | translate }}</p>
         <div id="colleague">
           <div id="blue-line"></div>
-          <p>{{ item.name }} - {{ item.profession }}</p>
+          <p>
+            {{ item.name | translate }}
+            <span>|</span>
+            {{ 'comments.' + item.name + '.profession' | translate }}
+          </p>
         </div>
       </div>
       <div id="colleague-picture">
-        <img id="portrait" src="{{ item.img }}" alt="" />
+        <img id="portrait" src="{{ 'comments.' + item.name + '.img' | translate }}" alt="" />
       </div>
-    <div id="picture-line"></div>
+      <div id="picture-line"></div>
     </div>
   }
 </div>
