@@ -9,6 +9,14 @@ export interface CommentFace {
   img: string;
 }
 
+export interface PersonFace {
+  [key: string]: {
+    "comment": string;
+    "profession": string;
+    "img": string;
+  }
+}
+
 @Component({
   selector: 'app-comments',
   imports: [TranslatePipe],
@@ -30,7 +38,7 @@ export class Comments {
     this.comments = [];
     const commentsData = deTranslations.comments;
     for (const key of Object.keys(commentsData)) {
-      const personData = (commentsData as any)[key];
+      const personData = (commentsData as PersonFace)[key];
       this.comments.push({
         name: key,
         comment: personData.comment,
