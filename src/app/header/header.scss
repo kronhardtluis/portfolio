@@ -5,32 +5,107 @@ img {
   height: 100%;
 }
 
-nav {
+#navigation {
   display: flex;
   align-items: center;
-  gap: 2rem;
 
-  div {
-    display: flex;
-    gap: 1rem;
-
-    a:hover {
-      color: all.$myGreen;
+  #menu {
+    display: none;
+    height: 56px;
+    @include all.mouse {
+      cursor: pointer;
     }
+  }
 
-    button {
-      border: 2px solid all.$myGreen;
-      border-radius: 20%;
-      padding: 5px;
-      &:hover {
-        cursor: pointer;
-        border-color: all.$myPurple;
-        background-color: all.$myPurple;
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    ul {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        font-size: clamp(16px, 1.8rem, 40px);
+        @include all.mouse {
+          color: all.$myGreen;
+        }
       }
     }
 
-    .chosen {
-      background-color: all.$myGreen;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        border: 2px solid all.$myGreen;
+        border-radius: 20%;
+        padding: 5px;
+        font-size: clamp(16px, 1.8rem, 40px);
+        @include all.mouse {
+          cursor: pointer;
+          border-color: all.$myPurple;
+          background-color: all.$myPurple;
+        }
+      }
+
+      p {
+        display: none;
+        font-size: clamp(16px, 1.8rem, 40px);
+      }
+
+      .chosen {
+        background-color: all.$myGreen;
+      }
+    }
+  }
+}
+
+@include all.tablet {
+  #navigation #menu {
+    display: block;
+  }
+
+  #navigation nav {
+    position: absolute;
+    top: 10dvh;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 16px 24px;
+    border-radius: 24px 0 24px 24px;
+    background-color: rgb(40, 52, 77);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      display: flex;
+
+      button {
+        border: none;
+        margin: 2px;
+        padding: 8px;
+        @include all.mouse {
+          border: 2px solid all.$myGreen;
+          border-radius: 50%;
+          background: none;
+          margin: 0;
+        }
+      }
+
+      .chosen {
+        background: none;
+        color: all.$myGreen;
+      }
+
+      p {
+        display: block;
+      }
     }
   }
 }

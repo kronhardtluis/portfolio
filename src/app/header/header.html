@@ -1,12 +1,16 @@
-<a routerLink=""><img src="assets/img/LuisLogo.png" alt="Luis"></a>
-<nav>
-  <div>
-    <a href="#about-me">{{'header.about_me' | translate}}</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Portfolio</a>
-  </div>
-  <div>
-    <button id="de" class="chosen" (click)="useLanguage('de')">DE</button>
-    <button id="en" (click)="useLanguage('en')">EN</button>
-  </div>
-</nav>
+<a routerLink=""><img src="assets/img/LuisLogo.png" alt="Luis" /></a>
+<div id="navigation">
+  <button id="menu"><img src="assets/icons/menu.png" alt="menu" /></button>
+  <nav>
+    <ul>
+      <li><a href="#am">{{ 'header.about_me' | translate }}</a></li>
+      <li><a href="#sk">Skills</a></li>
+      <li><a href="#pr">Portfolio</a></li>
+    </ul>
+    <div>
+      <button id="de" class="chosen" (click)="useLanguage('de')">DE</button>
+      <p>|</p>
+      <button id="en" (click)="useLanguage('en')">EN</button>
+    </div>
+  </nav>
+</div>
