@@ -21,6 +21,8 @@
   margin-left: 8px;
 }
 
-a:hover {
-  color: all.$myPurple;
+a {
+  @include all.mouse {
+    color: all.$myPurple;
+  }
 }

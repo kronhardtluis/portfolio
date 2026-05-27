@@ -1,18 +1,18 @@
 @use '../../../public/assets/styles/all-styles.scss' as all;
 
 app-head {
-  padding-top: 20dvh;
+  padding-top: 15dvh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  min-height: 85dvh;
+  min-height: 80dvh;
   padding-inline: 5%;
 }
 
 app-about-me {
-  padding-top: 5dvh;
+  padding-top: 10dvh;
   width: 200%;
   box-shadow: 0px 30px 30px rgba(255, 255, 255, 0.05);
   border-radius: 0 0 70% 30%;
@@ -26,7 +26,7 @@ app-about-me {
 }
 
 app-skills {
-  padding-top: 15dvh;
+  padding-top: 10dvh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ app-skills {
 }
 
 app-projects {
-  padding-top: 7dvh;
+  padding-top: 5dvh;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -49,7 +49,7 @@ app-comments {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80dvh;
+  height: 60dvh;
   padding-top: 10dvh;
   margin-left: 5%;
   gap: 10%;

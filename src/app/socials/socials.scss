@@ -7,7 +7,7 @@ nav {
   img {
     width: 32px;
     height: auto;
-    &:hover {
+    @include all.mouse {
       cursor: pointer;
     }
   }
