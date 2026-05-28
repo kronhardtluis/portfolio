@@ -45,7 +45,6 @@
     content-visibility: hidden;
     background-position: center;
     background-size: cover;
-    background-size: clamp(300px, 40dvw, 640px);
     background-color: all.$myBackground;
 
     @include all.mouse {
@@ -92,19 +91,5 @@
         color: all.$myGreen;
       }
     }
-  }
-}
-
-@keyframes zoom-effect {
-  0% {
-    // prozentualer Zeitpunkt
-    background-size: 100%;
-  }
-  100% {
-    // prozentualer Zeitpunkt
-    background-size: 160%;
-    content-visibility: visible;
-    background-position: bottom;
-    background-repeat: no-repeat;
   }
 }
