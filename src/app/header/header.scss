@@ -25,11 +25,20 @@ img {
     ul {
       display: flex;
       gap: 2rem;
+      width: 100%;
 
-      a {
-        font-size: clamp(16px, 1.8rem, 40px);
-        @include all.mouse {
-          color: all.$myGreen;
+      li {
+        width: 100%;
+
+        a {
+          font-size: clamp(24px, 1.8rem, 40px);
+          width: 100%;
+          display: block;
+          text-wrap: nowrap;
+          padding: 10px;
+          @include all.mouse {
+            color: all.$myGreen;
+          }
         }
       }
     }
@@ -43,7 +52,7 @@ img {
         border: 2px solid all.$myGreen;
         border-radius: 20%;
         padding: 5px;
-        font-size: clamp(16px, 1.8rem, 40px);
+        font-size: clamp(24px, 1.8rem, 40px);
         @include all.mouse {
           cursor: pointer;
           border-color: all.$myPurple;

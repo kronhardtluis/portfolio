@@ -2,11 +2,11 @@
 @use './media-queries.scss' as mq;
 
 @mixin myButton($bg-color: variables.$myGreen, $h-color: variables.$myPurple) {
-    font-size: 1.25rem;
+    font-size: clamp(16px, 1.25rem, 100px);
     background-color: $bg-color;
-    padding-block: 0.6rem;
-    padding-inline: 1.75rem;
-    border-radius: 0.5rem;
+    padding-block: clamp(8px, 0.6rem, 100px);
+    padding-inline: clamp(16px, 1.75rem, 100px);
+    border-radius: clamp(8px, 0.5rem, 100px);
 
     @include mq.mouse {
       cursor: pointer;

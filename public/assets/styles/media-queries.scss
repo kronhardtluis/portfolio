@@ -5,7 +5,7 @@
 }
 
 @mixin notebook {
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     @content;
   }
 }
@@ -16,17 +16,17 @@
   }
 }
 
+@mixin mobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
 @mixin mouse {
   @media (hover: hover) {
     &:hover {
       @content;
     }
-  }
-}
-
-@mixin mobile {
-  @media (max-width: 640px) {
-    @content;
   }
 }
 
@@ -50,6 +50,12 @@
 
 @include tablet {
   html {
-    font-size: 13px;
+    font-size: 12px;
+  }
+}
+
+@include mobile {
+  html {
+    font-size: 5.9px;
   }
 }

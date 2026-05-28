@@ -12,18 +12,32 @@ article {
 
     img {
       width: 1.5rem;
-      height: 24px;
+      height: 1.8rem;
       margin: 16px;
       margin-top: 20px;
-      min-height: 1.8rem;
       min-width: 1.5rem;
     }
 
     #puzzle {
       height: 1.8rem;
       width: 1.8rem;
-      min-height: 1.8rem;
+      margin: calc(16px - 0.15rem);
+      margin-top: 16px;
+      min-height: 24px;
       min-width: 1.8rem;
+    }
+
+    @include all.mobile {
+      img {
+        min-height: 30px;
+        min-width: 24px;
+      }
+
+      #puzzle {
+        min-height: 24px;
+        min-width: 24px;
+        margin: 16px;
+      }
     }
 
     p {

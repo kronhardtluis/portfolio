@@ -3,7 +3,7 @@ html {
 }
 
 p {
-  font-size: clamp(16px, 1rem, 24px);
+  font-size: clamp(16px, 1rem, 100px);
 }
 
 h1 {
@@ -12,19 +12,19 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: clamp(16px, 3.5rem, 100px);
 }
 
 h3 {
-  font-size: 2.75rem;
+  font-size: clamp(16px, 2.75rem, 100px);
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: clamp(16px, 1.5rem, 100px);
 }
 
 nav {
-  font-size: 1.4rem;
+  font-size: clamp(16px, 1.4rem, 100px);
 }
 
 @font-face {
