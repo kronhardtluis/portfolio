@@ -1,7 +1,7 @@
 <a routerLink=""><img src="assets/img/LuisLogo.png" alt="Luis" /></a>
 <div id="navigation">
-  <button id="menu"><img src="assets/icons/menu.png" alt="menu" /></button>
-  <nav>
+  <button id="menu" (click)="toggleMenu()" (blur)="toggleMenu()"><img src="assets/icons/menu.png" alt="menu" /></button>
+  <nav id="nav" class="hide">
     <ul>
       <li><a href="#am">{{ 'header.about_me' | translate }}</a></li>
       <li><a href="#sk">Skills</a></li>

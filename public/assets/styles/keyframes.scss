@@ -43,3 +43,31 @@
     opacity: 1;
   }
 }
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    translate: 100%;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0%;
+    display: block;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    translate: 0%;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    translate: 100%;
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,14 +11,25 @@ import { RouterLink } from "@angular/router";
 export class Header {
   private translate = inject(TranslateService);
 
-  useLanguage(language: string): void {
-      this.translate.use(language);
-      const deRef: HTMLElement = document.getElementById('de')!;
-      const enRef: HTMLElement = document.getElementById('en')!;
+  toggleMenu(): void {
+    const navRef: HTMLElement = document.getElementById('nav')!;
+    if (navRef.matches('.active, .inactive')) {
+      navRef.classList.toggle('active');
+      navRef.classList.toggle('inactive');
+    } else {
+      navRef.classList.add('active');
+      navRef.classList.remove('hide');
+    }
+  }
 
-      if (!document.getElementById(language)!.classList.contains('chosen')) {
-    deRef.classList.toggle('chosen');
-    enRef.classList.toggle('chosen');
-      }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+    const deRef: HTMLElement = document.getElementById('de')!;
+    const enRef: HTMLElement = document.getElementById('en')!;
+
+    if (!document.getElementById(language)!.classList.contains('chosen')) {
+      deRef.classList.toggle('chosen');
+      enRef.classList.toggle('chosen');
+    }
   }
 }
