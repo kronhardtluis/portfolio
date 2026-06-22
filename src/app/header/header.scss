@@ -20,6 +20,7 @@ img {
   nav {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 2rem;
 
     ul {
@@ -73,47 +74,62 @@ img {
 }
 
 @include all.tablet {
-  #navigation #menu {
-    display: block;
-  }
-
-  #navigation nav {
-    position: absolute;
-    top: 10dvh;
-    right: 5%;
-    display: flex;
-    flex-direction: column;
-    padding: 24px 24px 16px 24px;
-    border-radius: 24px 0 24px 24px;
-    background-color: rgb(40, 52, 77);
-
-    ul {
-      display: flex;
-      flex-direction: column;
+  #navigation {
+    #menu {
+      display: block;
     }
 
-    div {
-      display: flex;
+    nav {
+      gap: 0;
+      position: absolute;
+      top: 10dvh;
+      right: -5dvw;
+      flex-direction: column;
+      padding: 24px 24px 16px 24px;
+      border-radius: 24px 0 0px 24px;
+      background-color: rgb(40, 52, 77);
 
-      button {
-        border: none;
-        margin: 2px;
-        padding: 8px;
-        @include all.mouse {
-          border: 2px solid all.$myGreen;
-          border-radius: 50%;
-          background: none;
-          margin: 0;
+      &.hide {
+        display: none;
+      }
+
+      &.active {
+        animation: slideIn 0.5s forwards;
+      }
+
+      &.inactive {
+        animation: slideOut 0.5s forwards;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      div {
+        display: flex;
+
+        button {
+          border: none;
+          margin: 2px;
+          padding: 8px;
+          @include all.mouse {
+            border: 2px solid all.$myGreen;
+            border-radius: 50%;
+            background: none;
+            margin: 0;
+          }
         }
-      }
 
-      .chosen {
-        background: none;
-        color: all.$myGreen;
-      }
+        .chosen {
+          background: none;
+          color: all.$myGreen;
+        }
 
-      p {
-        display: block;
+        p {
+          display: block;
+        }
       }
     }
   }
