@@ -1,6 +1,5 @@
 <a routerLink=""><img src="assets/img/LuisLogo.png" alt="Luis" /></a>
 <div id="navigation">
-  <button id="menu" (click)="toggleMenu()" (blur)="toggleMenu()"><img src="assets/icons/menu.png" alt="menu" /></button>
   <nav id="nav" class="hide">
     <ul>
       <li><a href="#am">{{ 'header.about_me' | translate }}</a></li>
@@ -13,4 +12,5 @@
       <button id="en" (click)="useLanguage('en')">EN</button>
     </div>
   </nav>
+  <button id="menu" (click)="toggleMenu()" (blur)="toggleMenu()"><img src="assets/icons/menu.png" alt="menu" /></button>
 </div>
