@@ -1,40 +1,45 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
-
 .background {
   position: absolute;
-  top: 0;
-  height: 100%;
+  max-height: 100%;
+  width: 40%;
 
-    &#purple{
+  &#purple {
+    top: 0;
     left: 0;
   }
 
-  &#blue{
+  &#blue {
+    bottom: 0;
     right: 0;
+    aspect-ratio: 9/20;
+    translate: 0 -10%;
   }
 }
 
 #title {
   display: flex;
   align-items: center;
+  text-shadow: 0px 0px 12px all.$myBackground;
 
   h2 {
     font-weight: normal;
     rotate: 270deg;
     margin-top: 0.5rem;
+    text-shadow: 0px 0px 12px all.$myBackground;
   }
 
-  h3{
-  color: all.$myPurple;
-  font-weight: normal;
-}
+  h3 {
+    color: all.$myPurple;
+    font-weight: normal;
+    text-shadow: 0px 0px 12px all.$myBackground;
+  }
 }
 
 a {
   @include all.myButton();
 }
-
 
 #socials {
   width: 100%;
@@ -47,6 +52,12 @@ a {
     @include all.sideLine(all.$myGreen);
     position: absolute;
     right: 98%;
+  }
+
+  @media (pointer: coarse) {
+    #scroll-down {
+      display: none;
+    }
   }
 
   #scroll-down {
