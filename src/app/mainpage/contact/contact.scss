@@ -56,6 +56,12 @@
       padding-inline: 16px;
       width: 100%;
 
+      &:-webkit-autofill {
+          transition:
+            background-color 999999s ease-in-out 0s,
+            color 999999s ease-in-out 0s;
+        }
+
       &:hover,
       &:focus {
         border-color: all.$myBlue;
