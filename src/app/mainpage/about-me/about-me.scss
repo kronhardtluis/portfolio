@@ -1,7 +1,7 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
 article {
-  width: 40%;
+  width: 50%;
   margin-bottom: 5%;
   z-index: 1;
   @include all.myH2();
@@ -27,19 +27,6 @@ article {
       min-width: 1.8rem;
     }
 
-    @include all.mobile {
-      img {
-        min-height: 30px;
-        min-width: 24px;
-      }
-
-      #puzzle {
-        min-height: 24px;
-        min-width: 24px;
-        margin: 16px;
-      }
-    }
-
     p {
       margin-top: 16px;
     }
@@ -62,5 +49,38 @@ article {
     height: 140%;
     z-index: 0;
     translate: -25% 25%;
+  }
+}
+
+@include all.mobile {
+  article {
+    width: 100%;
+    grid-row: 2;
+    margin-top: 10dvh;
+
+    .info {
+      img {
+        min-height: 30px;
+        min-width: 24px;
+      }
+
+      #puzzle {
+        min-height: 24px;
+        min-width: 24px;
+        margin: 16px;
+      }
+    }
+  }
+
+  #myself {
+    translate: 23% 0;
+    grid-row: 1;
+    box-shadow: 0px 30px 30px rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 100% 30%;
+    width: 250%;
+    right: 105%;
+    padding-right: 120%;
+    padding-left: 65%;
+    overflow: hidden;
   }
 }

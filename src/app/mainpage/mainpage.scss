@@ -63,3 +63,15 @@ app-contact {
   overflow: hidden;
   max-width: 100%;
 }
+
+@include all.mobile {
+  app-about-me {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 100%;
+    right: 0;
+    padding-inline: 5%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
